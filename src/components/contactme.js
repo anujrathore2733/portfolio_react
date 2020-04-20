@@ -11,7 +11,7 @@ const Contactme = () => {
 
 
             <div className="contactme">
-                <h1 className="text-center queryhead">Send your Query ,I will get back asap.</h1>
+                <h1 className="text-center queryhead">Query from will we live soon.</h1>
                 <form className="form-group w-100">
                     <input className="form-control my-2"
                         type='text'
@@ -28,7 +28,7 @@ const Contactme = () => {
                         placeholder="Message"
                         required>
                     </textarea>
-                    <button className="btn btn-sm sendbtn">Send</button>
+                    <button className="btn btn-sm sendbtn" disabled>Send</button>
                     <h4 className="text-center text-light mt-5"><i className="fa fa-whatsapp" style={{fontSize:'25px'}}></i> 8699558944</h4>
                     <h4 className="text-center text-light"><i className="fa fa-phone" style={{fontSize:'25px'}}></i> 7289085122</h4>
                     <h4 className="text-center text-light"><i className="fa fa-envelope-o" style={{fontSize:'25px'}}></i> anujrathore2901@gmail.com</h4>
