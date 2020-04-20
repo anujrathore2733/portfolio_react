@@ -1,25 +1,64 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavItems from "./components/navitems";
+import IntroBox from "./components/Introbox";
+import MainBox from "./components/skill";
+import SkillTech from "./components/skill_tech";
+import SkillTools from "./components/skill_tools";
+import Social from "./components/social";
+import Underconstruction from "./components/workinprogress";
+import AboutMe from "./components/aboutmeintro";
+import Contactme from "./components/contactme";
+import Resume from "./components/resumedownload";
+
+import { BrowserRouter, Link, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="resumediv">
+          <Resume></Resume>
+        </div>
+        <NavItems></NavItems>
+
+        <Route path="/" exact>
+          <div className="container">
+            <div className="row">
+              <IntroBox></IntroBox>
+            </div>
+          </div>
+        </Route>
+        <Route path="/skills" exact>
+          <div>
+            <MainBox></MainBox>
+          </div>
+        </Route>
+        <Route path="/skills/technologies">
+          <div>
+            <SkillTech></SkillTech>
+          </div>
+        </Route>
+        <Route path="/skills/tools">
+          <div>
+            <SkillTools></SkillTools>
+          </div>
+        </Route>
+        <Route path="/social">
+          <Social></Social>
+        </Route>
+        <Route path="/AboutMe">
+          <AboutMe></AboutMe>
+        </Route>
+        <Route path="/contactME">
+          <Contactme></Contactme>
+        </Route>
+        <div className="workinprogress">
+          <Underconstruction></Underconstruction>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
