@@ -11,7 +11,7 @@ const Contactme = () => {
 
 
             <div className="contactme">
-                <h1 className="text-center queryhead">Query from will we live soon.</h1>
+                <h1 className="text-center queryhead">Query form will we live soon.</h1>
                 <form className="form-group w-100">
                     <input className="form-control my-2"
                         type='text'
